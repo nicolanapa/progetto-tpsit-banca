@@ -6,7 +6,7 @@ UseTab: Always
 BreakBeforeBraces: Attach
 AllowShortIfStatementsOnASingleLine: false
 AllowShortBlocksOnASingleLine: false
-AllowShortFunctionsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Inline
 ColumnLimit: 80
 AccessModifierOffset: -4
 IndentCaseLabels: true
