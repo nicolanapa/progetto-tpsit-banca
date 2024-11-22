@@ -1,6 +1,8 @@
 #include "Utente.h"
 
-Utente::Utente(double portafoglio) {}
+Utente::Utente(double portafoglio) {
+	this->portafoglio = portafoglio;
+}
 
 void Utente::addToPortafoglio(double portafoglio) {
 	this->portafoglio += portafoglio;
