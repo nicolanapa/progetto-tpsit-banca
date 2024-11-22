@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <ctime>
+#include <string>
 #include "Utente.h"
 
 using namespace std;
@@ -18,7 +19,7 @@ class Banca {
 
 	void prelievo(double sottrazione);
 
-	void investimento();
+	void investimento(string durata, string rischio);
 
 	void avanzamento();
 

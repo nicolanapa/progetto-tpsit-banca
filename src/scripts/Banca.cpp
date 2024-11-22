@@ -23,7 +23,17 @@ void Banca::prelievo(double sottrazione) {
 	}
 }
 
-void Banca::investimento() {}
+void Banca::investimento(string durata, string rischio) {
+	if (durata == "breve") {
+		this->avanzamento(/*1 mese*/);
+	} else if (durata == "media") {
+		this->avanzamento(/*6 mese*/);
+	} else if (durata == "lunga") {
+		this->avanzamento(/*12 mese*/);
+	}
+
+	// calcolazione rischio e guadagno
+}
 
 void Banca::avanzamento() {}
 
