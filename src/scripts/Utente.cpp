@@ -2,4 +2,10 @@
 
 Utente::Utente(double portafoglio) {}
 
-void Utente::add100() {}
+void Utente::addToPortafoglio(double portafoglio) {
+	this->portafoglio += portafoglio;
+}
+
+double Utente::getPortafoglio() {
+	return this->portafoglio;
+}

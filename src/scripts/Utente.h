@@ -5,7 +5,9 @@ class Utente {
 	double portafoglio;
 
 	public:
-	Utente(double portafoglio);
+	Utente(double portafoglio = 100);
 
-	void add100();
+	void addToPortafoglio(double portafoglio);
+
+	double getPortafoglio();
 };
