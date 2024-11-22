@@ -1,9 +1,10 @@
 #include <iostream>
 #include "scripts/Banca.h"
 #include "scripts/Utente.h"
-#include "test/test.h"
 
 using namespace std;
+
+void test();
 
 int main() {
 	test();

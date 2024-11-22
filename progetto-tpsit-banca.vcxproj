@@ -131,7 +131,6 @@
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\scripts\Utente.cpp" />
     <ClCompile Include="src\test\test.cpp" />
-    <ClCompile Include="src\test\test.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\scripts\Banca.h" />
