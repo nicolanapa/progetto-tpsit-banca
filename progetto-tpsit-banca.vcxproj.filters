@@ -18,12 +18,18 @@
     <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\Banca.cpp">
+    <ClCompile Include="src\scripts\Banca.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\scripts\Utente.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Banca.h">
+    <ClInclude Include="src\scripts\Banca.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scripts\Utente.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

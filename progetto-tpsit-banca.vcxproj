@@ -127,11 +127,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src\Banca.cpp" />
+    <ClCompile Include="src\scripts\Banca.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\scripts\Utente.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Banca.h" />
+    <ClInclude Include="src\scripts\Banca.h" />
+    <ClInclude Include="src\scripts\Utente.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".clang-format" />
