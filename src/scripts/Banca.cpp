@@ -24,6 +24,13 @@ void Banca::prelievo(double sottrazione) {
 }
 
 void Banca::investimento(string durata, string rischio) {
+	if (this->soldi <= 0) {
+		cout << "Nessun investimento disponibile: ";
+		cout << "Conto inferiore o uguale a 0" << endl;
+
+		return;
+	}
+
 	if (durata == "breve") {
 		this->avanzamento(/*1 mese*/);
 	} else if (durata == "media") {
@@ -39,4 +46,8 @@ void Banca::avanzamento() {}
 
 double Banca::getSoldi() {
 	return this->soldi;
+}
+
+double Banca::getPortafoglio() {
+	return this->utente.getPortafoglio();
 }

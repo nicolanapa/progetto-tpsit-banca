@@ -10,7 +10,7 @@ class Banca {
 	private:
 	double soldi;
 	Utente utente;
-	time_t tempo;
+	//time_t tempo;
 
 	public:
 	Banca(double soldi, Utente utente = Utente());
@@ -24,4 +24,6 @@ class Banca {
 	void avanzamento();
 
 	double getSoldi();
+
+	double getPortafoglio();
 };
