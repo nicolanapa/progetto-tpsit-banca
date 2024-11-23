@@ -1,8 +1,10 @@
 #include "Banca.h"
+#include "Data.h"
 
-Banca::Banca(double soldi, Utente utente) {
+Banca::Banca(double soldi, Utente utente, Data tempo) {
 	this->soldi = soldi;
 	this->utente = utente;
+	this->tempo = tempo;
 }
 
 void Banca::deposito(double somma) {
@@ -32,17 +34,23 @@ void Banca::investimento(string durata, string rischio) {
 	}
 
 	if (durata == "breve") {
-		this->avanzamento(/*1 mese*/);
+		this->avanzamento(0, 1, 0);
 	} else if (durata == "media") {
-		this->avanzamento(/*6 mese*/);
+		this->avanzamento(0, 6, 0);
 	} else if (durata == "lunga") {
-		this->avanzamento(/*12 mese*/);
+		this->avanzamento(0, 0, 1);
 	}
 
 	// calcolazione rischio e guadagno
 }
 
-void Banca::avanzamento() {}
+void Banca::avanzamento(int giorno, int mese, int anno) {
+	// temp save valori vecchi per la comparazione
+	this->tempo.avanzamento(giorno, mese, anno);
+	// comparazione e aggiunta bonus 100 euro
+	// this->utente.addToPortafoglio(100);
+	// cout << "Bonus 100 euro aggiunti al Portafoglio!" << endl;
+}
 
 double Banca::getSoldi() {
 	return this->soldi;

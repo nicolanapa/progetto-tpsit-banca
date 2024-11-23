@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
-#include <ctime>
 #include <string>
 #include "Utente.h"
+#include "Data.h"
 
 using namespace std;
 
@@ -10,10 +10,10 @@ class Banca {
 	private:
 	double soldi;
 	Utente utente;
-	//time_t tempo;
+	Data tempo;
 
 	public:
-	Banca(double soldi, Utente utente = Utente());
+	Banca(double soldi, Utente utente = Utente(), Data tempo = Data());
 
 	void deposito(double somma);
 
@@ -21,7 +21,7 @@ class Banca {
 
 	void investimento(string durata, string rischio);
 
-	void avanzamento();
+	void avanzamento(int giorno, int mese = 0, int anno = 0);
 
 	double getSoldi();
 
