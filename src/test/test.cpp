@@ -29,4 +29,10 @@ void test() {
 	cout << "Portafoglio: " << giornoFelice.getPortafoglio() << endl;
 
 	cout << "Conto: " << giornoFelice.getSoldi() << endl;
+
+	giornoFelice.avanzamento(0, 0, 1);
+
+	cout << "Portafoglio: " << giornoFelice.getPortafoglio() << endl;
+
+	cout << "Conto: " << giornoFelice.getSoldi() << endl;
 }
