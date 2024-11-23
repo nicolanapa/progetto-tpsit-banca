@@ -30,6 +30,9 @@
     <ClCompile Include="src\scripts\Data.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\test\dataTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\scripts\Banca.h">
