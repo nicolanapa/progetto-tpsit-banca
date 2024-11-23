@@ -1,7 +1,6 @@
 #pragma once
 #include "../scripts/Banca.h"
 
-
 void test() {
 	Banca giornoFelice(0, Utente(), Data(23, 11));
 
@@ -30,5 +29,4 @@ void test() {
 	cout << "Portafoglio: " << giornoFelice.getPortafoglio() << endl;
 
 	cout << "Conto: " << giornoFelice.getSoldi() << endl;
-
 }
