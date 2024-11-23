@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\scripts\Data.cpp" />
     <ClCompile Include="src\scripts\Banca.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\scripts\Utente.cpp" />
     <ClCompile Include="src\test\test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\scripts\Data.h" />
     <ClInclude Include="src\scripts\Banca.h" />
     <ClInclude Include="src\scripts\Utente.h" />
   </ItemGroup>

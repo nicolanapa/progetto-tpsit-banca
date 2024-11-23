@@ -27,12 +27,18 @@
     <ClCompile Include="src\test\test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\scripts\Data.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\scripts\Banca.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\scripts\Utente.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\scripts\Data.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
