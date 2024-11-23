@@ -3,7 +3,7 @@
 
 
 void test() {
-	Banca giornoFelice(0);
+	Banca giornoFelice(0, Utente(), Data(23, 11));
 
 	cout << "Conto: " << giornoFelice.getSoldi() << endl;
 
@@ -24,4 +24,11 @@ void test() {
 	cout << "Portafoglio: " << giornoFelice.getPortafoglio() << endl;
 
 	cout << "Conto: " << giornoFelice.getSoldi() << endl;
+
+	giornoFelice.avanzamento(0, 3, 0);
+
+	cout << "Portafoglio: " << giornoFelice.getPortafoglio() << endl;
+
+	cout << "Conto: " << giornoFelice.getSoldi() << endl;
+
 }
