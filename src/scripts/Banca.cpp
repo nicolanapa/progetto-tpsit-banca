@@ -25,7 +25,7 @@ void Banca::prelievo(double sottrazione) {
 	}
 }
 
-void Banca::investimento(string durata, string rischio) {
+void Banca::investimento(string durata, string rischioTeorico) {
 	if (this->soldi <= 0) {
 		cout << "Nessun investimento disponibile: ";
 		cout << "Conto inferiore o uguale a 0" << endl;
@@ -33,15 +33,37 @@ void Banca::investimento(string durata, string rischio) {
 		return;
 	}
 
+	double guadagno = 1;
+	double rischio = 0;
+
 	if (durata == "breve") {
 		this->avanzamento(0, 1, 0);
+
+		guadagno = 1.0002;
 	} else if (durata == "media") {
 		this->avanzamento(0, 6, 0);
+
+		guadagno = 1.002;
 	} else if (durata == "lunga") {
 		this->avanzamento(0, 0, 1);
+
+		guadagno = 1.2;
 	}
 
-	// calcolazione rischio e guadagno
+	if (rischioTeorico == "basso") {
+		rischio = 0.75;
+	} else if (rischioTeorico == "medio") {
+		rischio = 1.5;
+	} else if (rischioTeorico == "alto") {
+		rischio = 3;
+	}
+
+	cout << "Calcolazione perdita o guadagno finale..." << endl;
+	if (/*rand()*/1) {
+		cout << "Guadagno!" << endl;
+	} else {
+		cout << "Perdita!" << endl;
+	}
 }
 
 void Banca::avanzamento(int giorno, int mese, int anno) {
