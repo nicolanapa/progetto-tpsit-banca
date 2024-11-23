@@ -6,8 +6,14 @@ using namespace std;
 
 void test();
 
+void dataTest();
+
 int main() {
 	test();
+
+	cout << endl;
+
+	dataTest();
 
 	return 0;
 }
