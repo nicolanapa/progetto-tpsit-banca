@@ -11,6 +11,8 @@ void dataTest();
 void investimentoTest();
 
 int main() {
+	srand(time(NULL));
+
 	test();
 
 	cout << endl;
