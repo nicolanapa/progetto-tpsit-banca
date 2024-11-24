@@ -15,4 +15,6 @@ class Data {
 	void avanzamento(int giorno, int mese, int anno);
 
 	void getTime();
+
+	int getDifferenzaMesi(Data dataPrecedente);
 };

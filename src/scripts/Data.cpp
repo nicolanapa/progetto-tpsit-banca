@@ -31,3 +31,8 @@ void Data::avanzamento(int giorno, int mese, int anno) {
 void Data::getTime() {
 	cout << giorno << "/" << mese << "/" << anno << endl;
 }
+
+int Data::getDifferenzaMesi(Data dataPrecedente) {
+	return (this->mese - dataPrecedente.mese) +
+		   (this->anno - dataPrecedente.anno) * 12;
+}
