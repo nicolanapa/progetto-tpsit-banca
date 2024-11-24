@@ -106,11 +106,15 @@ void Banca::investimento(double soldi, string durata, string rischioTeorico) {
 }
 
 void Banca::avanzamento(int giorno, int mese, int anno) {
-	// temp save valori vecchi per la comparazione
+	Data temp = this->tempo;
+
 	this->tempo.avanzamento(giorno, mese, anno);
-	// comparazione e aggiunta bonus 100 euro
-	// this->utente.addToPortafoglio(100);
-	// cout << "Bonus 100 euro aggiunti al Portafoglio!" << endl;
+
+	int bonus = this->tempo.getDifferenzaMesi(temp) * 100;
+
+	this->utente.addToPortafoglio(bonus);
+
+	cout << "Bonus di " << bonus << " euro aggiunti al Portafoglio!" << endl;
 }
 
 double Banca::getSoldi() {
