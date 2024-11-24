@@ -50,59 +50,38 @@ void Banca::investimento(double soldi, string durata, string rischioTeorico) {
 		guadagno = 1.4;
 	}
 
+	double investimentoFinale = (soldi * guadagno) - soldi;
+
 	if (rischioTeorico == "basso") {
 		rischio = 1;
+		investimentoFinale *= 1.5;
 	} else if (rischioTeorico == "medio") {
 		rischio = 1.5;
+		investimentoFinale *= 2.5;
 	} else if (rischioTeorico == "alto") {
 		rischio = 3;
+		investimentoFinale *= 4;
 	}
 
 	double randomValue = (rand() % 8000) * rischio;
-	double investimentoFinale = (soldi * guadagno) - soldi;
 
 	cout << "Calcolazione perdita o guadagno finale..." << endl;
-	// cout << "RAND " << randomValue << endl << endl;
 
 	if (randomValue < 4500) {
 		cout << "Guadagno!" << endl;
 		cout << "Hai guadagnato ";
-
-		if (rischioTeorico == "basso") {
-			cout << investimentoFinale * 1.5 << " euro" << endl;
-
-			this->soldi += investimentoFinale;
-		} else if (rischioTeorico == "medio") {
-			cout << investimentoFinale * 2.5 << " euro" << endl;
-
-			this->soldi += investimentoFinale * 2.5;
-		} else if (rischioTeorico == "alto") {
-			cout << investimentoFinale * 4 << " euro" << endl;
-
-			this->soldi += investimentoFinale * 4;
-		}
-
-		cout << "Conto attuale: " << this->getSoldi() << " euro" << endl;
 	} else {
 		cout << "Perdita!" << endl;
 		cout << "Hai perso ";
 
-		if (rischioTeorico == "basso") {
-			cout << investimentoFinale * 1.5 << " euro" << endl;
-
-			this->soldi -= investimentoFinale;
-		} else if (rischioTeorico == "medio") {
-			cout << investimentoFinale * 2.5 << " euro" << endl;
-
-			this->soldi -= investimentoFinale * 2.5;
-		} else if (rischioTeorico == "alto") {
-			cout << investimentoFinale * 4 << " euro" << endl;
-
-			this->soldi -= investimentoFinale * 4;
-		}
-
-		cout << "Conto attuale: " << this->getSoldi() << " euro" << endl;
+		investimentoFinale = -investimentoFinale;
 	}
+
+	cout << investimentoFinale << " euro" << endl;
+
+	this->soldi += investimentoFinale;
+
+	cout << "Conto attuale: " << this->getSoldi() << " euro" << endl;
 }
 
 void Banca::avanzamento(int giorno, int mese, int anno) {
