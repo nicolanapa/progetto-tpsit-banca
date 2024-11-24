@@ -19,7 +19,7 @@ class Banca {
 
 	void prelievo(double sottrazione);
 
-	void investimento(string durata, string rischio);
+	void investimento(double soldi, string durata, string rischio = "basso");
 
 	void avanzamento(int giorno, int mese = 0, int anno = 0);
 
