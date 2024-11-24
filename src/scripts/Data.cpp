@@ -8,19 +8,19 @@ Data::Data(int giorno, int mese, int anno) {
 
 void Data::avanzamento(int giorno, int mese, int anno) {
 	if (this->giorno + giorno > 31) {
-		int tempGiorno = (this->giorno + giorno) / 31;
+		int meseCalcolato = (this->giorno + giorno) / 31;
 
 		this->giorno = (this->giorno + giorno % 365) % 30;
-		this->mese += tempGiorno;
+		this->mese += meseCalcolato;
 	} else {
 		this->giorno += giorno;
 	}
 
 	if (this->mese + mese > 12) {
-		int tempMese = (this->mese + mese) / 12;
+		int annoCalcolato = (this->mese + mese) / 12;
 
-		this->mese = (this->mese + mese) - (tempMese * 12);
-		this->anno += tempMese;
+		this->mese = (this->mese + mese) - (annoCalcolato * 12);
+		this->anno += annoCalcolato;
 	} else {
 		this->mese += mese;
 	}
