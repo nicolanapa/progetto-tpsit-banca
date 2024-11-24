@@ -6,8 +6,6 @@ void test() {
 
 	cout << "Conto: " << giornoFelice.getSoldi() << endl;
 
-	giornoFelice.investimento("lunga", "alto");
-
 	giornoFelice.prelievo(20);
 
 	cout << "Conto: " << giornoFelice.getSoldi() << endl;
