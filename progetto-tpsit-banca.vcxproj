@@ -133,7 +133,7 @@
     <ClCompile Include="src\scripts\Utente.cpp" />
     <ClCompile Include="src\test\dataTest.cpp" />
     <ClCompile Include="src\test\investimentoTest.cpp" />
-    <ClCompile Include="src\test\test.cpp" />
+    <ClCompile Include="src\test\prelievoDepositoTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\scripts\Data.h" />

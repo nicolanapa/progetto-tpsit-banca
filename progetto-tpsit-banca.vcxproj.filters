@@ -24,7 +24,7 @@
     <ClCompile Include="src\scripts\Utente.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\test\test.cpp">
+    <ClCompile Include="src\test\prelievoDepositoTest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\scripts\Data.cpp">

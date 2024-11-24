@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void test();
+void prelievoDepositoTest();
 
 void dataTest();
 
@@ -13,7 +13,7 @@ void investimentoTest();
 int main() {
 	srand(time(NULL));
 
-	test();
+	prelievoDepositoTest();
 
 	cout << endl;
 

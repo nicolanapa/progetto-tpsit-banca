@@ -1,7 +1,7 @@
 #pragma once
 #include "../scripts/Banca.h"
 
-void test() {
+void prelievoDepositoTest() {
 	Banca giornoFelice(0, Utente(), Data(23, 11));
 
 	cout << "Conto: " << giornoFelice.getSoldi() << endl;
