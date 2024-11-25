@@ -12,6 +12,8 @@ class Banca {
 	Utente utente;
 	Data tempo;
 
+	int printGuiSelezioni();
+
 	public:
 	Banca(double soldi = 0, Utente utente = Utente(), Data tempo = Data());
 

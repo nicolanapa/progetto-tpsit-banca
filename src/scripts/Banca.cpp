@@ -2,13 +2,7 @@
 #include "Banca.h"
 #include "Data.h"
 
-Banca::Banca(double soldi, Utente utente, Data tempo) {
-	this->soldi = soldi;
-	this->utente = utente;
-	this->tempo = tempo;
-}
-
-void Banca::gui() {
+int Banca::printGuiSelezioni() {
 	cout << "Scegli una di queste opzioni:" << endl;
 	cout << "1 - deposito      2 - prelievo" << endl;
 	cout << "3 - investimento  4 - avanzamento nel tempo" << endl;
@@ -17,9 +11,21 @@ void Banca::gui() {
 	cout << "    7 - logout" << endl;
 
 	int scelta;
-	int soldi = 0;
 
 	cin >> scelta;
+
+	return scelta;
+}
+
+Banca::Banca(double soldi, Utente utente, Data tempo) {
+	this->soldi = soldi;
+	this->utente = utente;
+	this->tempo = tempo;
+}
+
+void Banca::gui() {
+	int scelta = this->printGuiSelezioni();
+	int soldi = 0;
 
 	while (scelta != 7) {
 		switch (scelta) {
@@ -46,10 +52,10 @@ void Banca::gui() {
 				break;
 			case 3: {
 				cout << "Puoi scegliere" << endl;
-				cout << " - quanto investire" << endl;
-				cout << " - la durata dell'investimento" << endl;
+				cout << " - quanto investire (required)" << endl;
+				cout << " - la durata dell'investimento (required)" << endl;
 				cout << "   breve, media, lunga" << endl;
-				cout << " - il rischio dell'investimento" << endl;
+				cout << " - il rischio dell'investimento (required)" << endl;
 				cout << "   basso, medio, alto" << endl;
 				cout << "Ricordati che hai " << this->getSoldi() << " euro"
 					 << endl;
@@ -61,10 +67,26 @@ void Banca::gui() {
 
 				this->investimento(soldi, durata, rischio);
 
+				cout << endl;
+
 				break;
 			}
 			case 4:
-				this->avanzamento(1);
+				cout << "Puoi scegliere" << endl;
+				cout << " - giorni (required)" << endl;
+				cout << " - mesi (non required, 0 per essere lasciato stare)"
+					 << endl;
+				cout << " - anni (non required, 0 per essere lasciato stare)"
+					 << endl;
+				cout << "Ogni mese un Bonus di 100 euro ti viene "
+						"automaticamente aggiunto al portafoglio"
+					 << endl;
+
+				int giorno, mese, anno;
+
+				cin >> giorno >> mese >> anno;
+
+				this->avanzamento(giorno, mese, anno);
 
 				break;
 			case 5:
@@ -83,7 +105,7 @@ void Banca::gui() {
 				break;
 		}
 
-		cin >> scelta;
+		scelta = this->printGuiSelezioni();
 	}
 }
 
