@@ -13,7 +13,9 @@ class Banca {
 	Data tempo;
 
 	public:
-	Banca(double soldi, Utente utente = Utente(), Data tempo = Data());
+	Banca(double soldi = 0, Utente utente = Utente(), Data tempo = Data());
+
+	void gui();
 
 	void deposito(double somma);
 
