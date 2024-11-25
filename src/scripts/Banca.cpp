@@ -1,3 +1,4 @@
+#include <string>
 #include "Banca.h"
 #include "Data.h"
 
@@ -5,6 +6,85 @@ Banca::Banca(double soldi, Utente utente, Data tempo) {
 	this->soldi = soldi;
 	this->utente = utente;
 	this->tempo = tempo;
+}
+
+void Banca::gui() {
+	cout << "Scegli una di queste opzioni:" << endl;
+	cout << "1 - deposito      2 - prelievo" << endl;
+	cout << "3 - investimento  4 - avanzamento nel tempo" << endl;
+	cout << "    5 - controlla il tuo conto" << endl;
+	cout << "    6 - controlla il tuo portafoglio" << endl;
+	cout << "    7 - logout" << endl;
+
+	int scelta;
+	int soldi = 0;
+
+	cin >> scelta;
+
+	while (scelta != 7) {
+		switch (scelta) {
+			case 1:
+				cout << "Quando vuoi depositare dal tuo portafoglio?" << endl;
+				cout << "Ricordati che hai " << this->getPortafoglio()
+					 << " euro" << endl;
+
+				cin >> soldi;
+
+				this->deposito(soldi);
+
+				break;
+			case 2:
+				cout << "Quando soldi vuoi prelevare verso il tuo portafoglio?"
+					 << endl;
+				cout << "Ricordati che hai " << this->getSoldi() << " euro"
+					 << endl;
+
+				cin >> soldi;
+
+				this->prelievo(soldi);
+
+				break;
+			case 3: {
+				cout << "Puoi scegliere" << endl;
+				cout << " - quanto investire" << endl;
+				cout << " - la durata dell'investimento" << endl;
+				cout << "   breve, media, lunga" << endl;
+				cout << " - il rischio dell'investimento" << endl;
+				cout << "   basso, medio, alto" << endl;
+				cout << "Ricordati che hai " << this->getSoldi() << " euro"
+					 << endl;
+
+				string durata;
+				string rischio;
+
+				cin >> soldi >> durata >> rischio;
+
+				this->investimento(soldi, durata, rischio);
+
+				break;
+			}
+			case 4:
+				this->avanzamento(1);
+
+				break;
+			case 5:
+				cout << "Nel tuo conto hai " << this->getSoldi() << " euro"
+					 << endl;
+
+				break;
+			case 6:
+				cout << "Nel tuo portafoglio hai " << this->getPortafoglio()
+					 << " euro" << endl;
+
+				break;
+			default:
+				cout << "Valore invalido" << endl;
+
+				break;
+		}
+
+		cin >> scelta;
+	}
 }
 
 void Banca::deposito(double somma) {
