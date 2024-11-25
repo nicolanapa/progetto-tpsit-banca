@@ -10,6 +10,8 @@ void dataTest();
 
 void investimentoTest();
 
+void guiTest();
+
 int main() {
 	srand(time(NULL));
 
@@ -22,6 +24,10 @@ int main() {
 	cout << endl;
 
 	investimentoTest();
+
+	cout << endl;
+
+	guiTest();
 
 	return 0;
 }
