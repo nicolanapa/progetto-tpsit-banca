@@ -72,6 +72,8 @@ void Banca::gui() {
 				break;
 			}
 			case 4:
+				this->tempo.getTime();
+
 				cout << "Puoi scegliere" << endl;
 				cout << " - giorni (required)" << endl;
 				cout << " - mesi (non required, 0 per essere lasciato stare)"
@@ -87,6 +89,8 @@ void Banca::gui() {
 				cin >> giorno >> mese >> anno;
 
 				this->avanzamento(giorno, mese, anno);
+
+				this->tempo.getTime();
 
 				break;
 			case 5:
